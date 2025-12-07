@@ -41,48 +41,56 @@
 			</div>
 		</div>
 		
-		<!-- REQUIREMENT a: JS WELCOME MESSAGE (ONLY ON INDEX) -->
-		<div class="welcome-box">
+		<!-- ✅ REQUIREMENT 1: JS WELCOME MESSAGE (ONLY ON INDEX) -->
+		<div id="welcome-message" style="background: #ffe6e6; padding: 15px; text-align: center; font-size: 20px; color: #b30000; border: 2px solid #ff6666; margin: 10px 0;">
 			<script>
+				// JS Welcome Message - Added using JavaScript
 				document.write("🎀 Welcome to SugarBloom Bakery - Where Every Cake Blooms with Flavor! 🎂");
 			</script>
 		</div>
 		
-		<!-- REQUIREMENT e: VERY VISIBLE TEMPLATE LINK -->
-		<a href="https://freewebsitetemplates.com/preview/frozenyogurtshop/index.html" target="_blank" class="template-link">
-			🔗 ORIGINAL TEMPLATE LINK (Frozen Yogurt Shop Template) - Click to compare with my modified version!
+		<!-- ✅ REQUIREMENT 5: VISIBLE TEMPLATE LINK -->
+		<a href="https://freewebsitetemplates.com/preview/frozenyogurtshop/index.html" target="_blank" 
+		   style="display: block; background: #e3f2fd; color: #1565c0; padding: 15px; text-align: center; 
+		          border: 3px solid #2196f3; font-weight: bold; margin: 10px 0; text-decoration: none;">
+			🔗 ORIGINAL TEMPLATE LINK (Click to compare with my modified version)
 		</a>
 		
-		<!-- REQUIREMENT c: JS FUNCTION WITH USER INPUT - VERY VISIBLE -->
-		<div style="text-align: center; padding: 20px; background: #fff0f0; border-radius: 10px; margin: 20px;">
-			<h2 style="color: #d81b60;">🎂 Cake Preference Quiz 🍰</h2>
+		<!-- ✅ REQUIREMENT 2: JS FUNCTION WITH USER INPUT -->
+		<div style="text-align: center; padding: 20px; background: #fff0f0; border-radius: 10px; margin: 20px; border: 2px solid #ffb6c1;">
+			<h2 style="color: #d81b60;">🎂 Interactive Cake Quiz 🍰</h2>
 			<p>Tell us about your cake preferences!</p>
-			<button class="js-button" onclick="cakeQuiz()">
-				✨ CLICK HERE FOR CAKE QUIZ ✨
+			<button onclick="cakeQuiz()" 
+			        style="padding: 12px 25px; background: #ff4081; color: white; border: none; 
+			               border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer;">
+				✨ Click Here for Cake Quiz ✨
 			</button>
-			<div id="cakeResult" style="min-height: 50px;"></div>
+			<div id="cakeResult" style="min-height: 50px; margin-top: 15px; font-weight: bold;"></div>
 		</div>
 		
 		<script>
-			// REQUIREMENT c: JS FUNCTION WITH USER INPUT
+			// ✅ REQUIREMENT 2: JS FUNCTION WITH USER INPUT
+			// Interactive cake preference quiz
 			function cakeQuiz() {
 				let name = prompt("Hello! What's your name?");
 				if (!name) {
-					document.getElementById("cakeResult").innerHTML = "Please enter your name!";
+					document.getElementById("cakeResult").innerHTML = "Please enter your name to continue!";
 					return;
 				}
 				
-				let cakeType = prompt("Hi " + name + "! What cake type do you prefer? (e.g., Chocolate, Vanilla, Red Velvet, Fruit, Cheesecake, Carrot)");
-				let occasion = prompt("What's the occasion? (Birthday, Wedding, Anniversary, Just Because)");
+				let cakeType = prompt("Hi " + name + "! What's your favorite cake type? (Chocolate, Vanilla, Red Velvet, Fruit, Cheesecake, Carrot)");
+				let occasion = prompt("What occasion are you celebrating? (Birthday, Wedding, Anniversary, Just Because)");
 				
-				let messages = [
-					`Perfect ${name}! Our ${cakeType || "special"} cake is ideal for ${occasion || "your celebration"}!`,
-					`Great choice ${name}! We have amazing ${cakeType || "custom"} cakes for ${occasion || "any event"}!`,
-					`${name}, you'll love our ${cakeType || "signature"} cakes! Perfect for ${occasion || "making memories"}!`
-				];
-				
-				let randomMsg = messages[Math.floor(Math.random() * messages.length)];
-				document.getElementById("cakeResult").innerHTML = randomMsg + " 🎉";
+				if (cakeType && occasion) {
+					document.getElementById("cakeResult").innerHTML = 
+						"🎉 Perfect " + name + "! Our " + cakeType + " cake is perfect for " + occasion + " celebrations!";
+				} else if (cakeType) {
+					document.getElementById("cakeResult").innerHTML = 
+						"🎉 Great choice " + name + "! We make amazing " + cakeType + " cakes!";
+				} else {
+					document.getElementById("cakeResult").innerHTML = 
+						"🎉 Thanks " + name + "! Visit us to see all our cake varieties!";
+				}
 			}
 		</script>
 
@@ -138,11 +146,10 @@
 					<a href="https://twitter.com" class="googleplus">Twitter</a>
 					<a href="https://pinterest.com" class="pinterest">Pinterest</a>
 				</div>
-				<!-- REQUIREMENT b: ID AND NAME IN FOOTER - NOW IN BLACK AND MORE VISIBLE -->
-				<p style="font-size: 18px; color: #000000; font-weight: bold; background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin: 10px 0;">
+				<!-- ✅ REQUIREMENT: ID AND NAME IN FOOTER (BLACK & VISIBLE) -->
+				<p style="font-size: 18px; color: #000000; font-weight: bold; background-color: #f8f9fa; padding: 10px; border-radius: 5px; margin: 10px 0;">
 					&copy; 2025 SugarBloom Bakery. | Student ID: 25224567 | Name: TANBIN ROWNAK JAHAN
 				</p>
-				<!-- REQUIREMENT e: Template link also in footer -->
 				<p>
 					<a href="https://freewebsitetemplates.com/preview/frozenyogurtshop/index.html" target="_blank" style="color: #1565c0; font-weight: bold;">
 						Original Template: Frozen Yogurt Shop

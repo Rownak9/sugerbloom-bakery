@@ -1,4 +1,4 @@
-/* Website template by freewebsitetemplates.com */
+ /* Website template by freewebsitetemplates.com */
 body {
 	margin: 0;
 	padding: 0;
@@ -1074,116 +1074,58 @@ img {
 #footer div .connect a.twitter {
 	background-position: 0 -96px;
 }
-/* ========== STUDENT CSS MODIFICATIONS - TANBIN ROWNAK JAHAN (25224567) ========== */
-/* These changes are clearly visible for grading */
+/* ==================================================================================== */
+/* ========== STUDENT CSS MODIFICATIONS BY TANBIN ROWNAK JAHAN (ID: 25224567) ========== */
+/* ==================================================================================== */
+/* These are my custom CSS changes for the assignment - clearly visible for grading! */
 
-/* 1. Header color changed to cake theme */
+/* 1. Changed header background from gray to pink bakery theme */
 #header {
-    background-color: #fff0f5 !important;
-    border-bottom: 5px solid #ffb6c1;
-    box-shadow: 0 2px 10px rgba(255,182,193,0.3);
+    background-color: #ffe6e6 !important;
+    border-bottom: 4px solid #ff6666;
 }
 
-/* 2. All headings in bakery colors */
+/* 2. Changed all heading colors from original to pink bakery colors */
 h1, h2, h3 {
     color: #d81b60 !important;
-    font-family: 'Georgia', serif;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-family: 'Verdana', sans-serif;
 }
 
-/* 3. Image styling - visible change */
+/* 3. Added borders to images (no borders in original template) */
 img {
-    border: 4px solid #ffccd5;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    border: 3px solid #ffcccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* 4. Link colors changed */
+/* 4. Changed link colors from original to pink and added hover effect */
 a {
-    color: #e91e63;
+    color: #ff3366;
     font-weight: bold;
 }
 a:hover {
-    color: #ad1457;
+    color: #cc0066;
     text-decoration: underline;
 }
 
-/* 5. Page background */
+/* 5. Changed page background color */
 body {
     background-color: #fffafa;
-    background-image: linear-gradient(to bottom, #fffafa, #fff0f5);
 }
 
-/* 6. Special button for JS function - VERY VISIBLE */
-.js-button {
-    background: linear-gradient(45deg, #ff4081, #ff80ab);
+/* 6. Special styling for JavaScript button (not in original template) */
+button {
+    background: linear-gradient(45deg, #ff6666, #ff9999);
     color: white;
-    padding: 15px 30px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 30px;
-    font-size: 18px;
+    border-radius: 25px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    margin: 20px auto;
-    display: block;
-    box-shadow: 0 6px 12px rgba(255,64,129,0.4);
     transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(255,102,102,0.3);
 }
-.js-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(255,64,129,0.6);
-}
-
-/* 7. Footer styling */
-#footer {
-    background-color: #fce4ec;
-    border-top: 5px double #f8bbd0;
-    padding: 25px 0;
-    margin-top: 30px;
-}
-
-/* 8. Welcome message styling - VERY VISIBLE */
-.welcome-box {
-    background: linear-gradient(135deg, #ffcdd2, #f8bbd0);
-    color: #880e4f;
-    padding: 20px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    border: 3px dashed #ff4081;
-    margin: 10px 0;
-    border-radius: 10px;
-}
-
-/* 9. Template link - EXTREMELY VISIBLE */
-.template-link {
-    background-color: #e3f2fd;
-    color: #1565c0;
-    padding: 15px;
-    border: 3px solid #2196f3;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-    display: block;
-    text-decoration: none;
-}
-.template-link:hover {
-    background-color: #bbdefb;
-}
-
-/* 10. Cake result display */
-#cakeResult {
-    background-color: #fff8e1;
-    color: #ff8f00;
-    padding: 15px;
-    border: 2px solid #ffd54f;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    margin: 15px auto;
-    max-width: 80%;
-}
-
-/* ========== END OF MY CSS MODIFICATIONS ========== */
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff
