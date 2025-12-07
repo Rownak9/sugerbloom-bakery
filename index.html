@@ -1,223 +1,64 @@
 <!doctype html>
-<!-- Website template by freewebsitetemplates.com -->
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>SugarBloom Bakery - Home</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" type="text/css" href="css/mobile.css">
-	<script src="js/mobile.js" type="text/javascript"></script>
-	<style>
-		/* My CSS modifications - clearly visible */
-		.welcome-message-box {
-			background: linear-gradient(135deg, #ffb6c1, #ffcccb);
-			padding: 15px;
-			text-align: center;
-			font-size: 22px;
-			color: #8b0000;
-			font-weight: bold;
-			border: 3px dashed #ff6b6b;
-			margin: 10px 0;
-			border-radius: 10px;
-		}
-		.js-quiz-box {
-			text-align: center;
-			padding: 20px;
-			background: #fff0f0;
-			border-radius: 10px;
-			margin: 20px;
-			border: 3px solid #ffb6c1;
-			box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-		}
-		.js-button {
-			padding: 12px 25px;
-			background: linear-gradient(45deg, #ff4081, #ff80ab);
-			color: white;
-			border: none;
-			border-radius: 25px;
-			font-size: 16px;
-			font-weight: bold;
-			cursor: pointer;
-			margin: 10px;
-			transition: all 0.3s;
-		}
-		.js-button:hover {
-			transform: scale(1.1);
-			box-shadow: 0 6px 12px rgba(255,64,129,0.4);
-		}
-		#quizResult {
-			margin-top: 15px;
-			padding: 10px;
-			background-color: #fff8e1;
-			color: #ff8f00;
-			font-weight: bold;
-			border-radius: 5px;
-			min-height: 50px;
-		}
-	</style>
-</head>
-<body>
-	<div id="page">
-		<div id="header">
-			<div>
-				<a href="index.html" class="logo"><img src="images/logo.png" alt="SugarBloom Bakery" style="height: 60px; width: auto;"></a>
-				<ul id="navigation">
-					<li class="selected">
-						<a href="index.html">Home</a>
-					</li>
-					<li class="menu">
-						<a href="about.html">About</a>
-						<ul class="primary">
-							<li>
-								<a href="product.html">Cakes</a>
-							</li>
-						</ul>
-					</li>
-					<li class="menu">
-						<a href="blog.html">Blog</a>
-						<ul class="secondary">
-							<li>
-								<a href="singlepost.html">Post</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="contact.html">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		
-		<!-- ✅ REQUIREMENT a: JS WELCOME MESSAGE (ADDED WITH JAVASCRIPT) -->
-		<div class="welcome-message-box">
-			<script>
-				// This welcome message is added using JavaScript
-				document.write("🎂 Welcome to SugarBloom Bakery - Where Every Cake is a Blooming Delight! 🍰");
-			</script>
-		</div>
-		
-		<!-- ✅ REQUIREMENT e: VERY VISIBLE TEMPLATE LINK -->
-		<div style="background: #e3f2fd; color: #1565c0; padding: 15px; text-align: center; 
-		           border: 3px solid #2196f3; font-weight: bold; margin: 10px 0; border-radius: 5px;">
-			<a href="https://freewebsitetemplates.com/preview/frozenyogurtshop/index.html" target="_blank" 
-			   style="color: #1565c0; text-decoration: none;">
-				🔗 ORIGINAL TEMPLATE LINK (Frozen Yogurt Shop Template) - Click to compare!
-			</a>
-		</div>
-		
-		<!-- ✅ REQUIREMENT c: JS FUNCTION WITH USER INPUT - VERY VISIBLE -->
-		<div class="js-quiz-box">
-			<h2 style="color: #d81b60;">🎂 Interactive Cake Quiz 🍰</h2>
-			<p>Test your cake knowledge! Click the button below:</p>
-			<button class="js-button" onclick="startCakeQuiz()">
-				✨ START CAKE QUIZ ✨
-			</button>
-			<div id="quizResult"></div>
-		</div>
-		
-		<script>
-			// ✅ REQUIREMENT c: JS FUNCTION WITH USER INPUT
-			// Interactive cake quiz function
-			function startCakeQuiz() {
-				let score = 0;
-				
-				// Question 1
-				let answer1 = prompt("QUESTION 1: What's the main ingredient in most cakes?\nA) Flour\nB) Sugar\nC) Eggs\nD) Butter");
-				if (answer1 && (answer1.toLowerCase() === 'a' || answer1.toLowerCase().includes('flour'))) {
-					score++;
-				}
-				
-				// Question 2
-				let answer2 = prompt("QUESTION 2: Which cake is known for its red color?\nA) Chocolate\nB) Red Velvet\nC) Carrot\nD) Cheesecake");
-				if (answer2 && (answer2.toLowerCase() === 'b' || answer2.toLowerCase().includes('red velvet'))) {
-					score++;
-				}
-				
-				// Question 3
-				let answer3 = prompt("QUESTION 3: What's your favorite cake flavor? (Type it out)");
-				
-				// Display results
-				let result = document.getElementById("quizResult");
-				if (score === 2) {
-					result.innerHTML = "🎉 Perfect score! You got " + score + "/2 correct! ";
-				} else if (score === 1) {
-					result.innerHTML = "👍 Good job! You got " + score + "/2 correct. ";
-				} else {
-					result.innerHTML = "😊 Thanks for playing! You got " + score + "/2 correct. ";
-				}
-				
-				if (answer3) {
-					result.innerHTML += "Your favorite flavor: <strong>" + answer3 + "</strong>. We have amazing " + answer3 + " cakes!";
-				} else {
-					result.innerHTML += "Visit us to try all our flavors!";
-				}
-			}
-		</script>
-
-		<div id="body" class="home">
-			<div class="header">
-				<img src="images/image 1.jpeg" alt="SugarBloom Bakery Cake Display" style="max-height: 400px; width: 100%; object-fit: cover;">
-				<div>
-					<a href="product.html">Browse All Cakes</a>
-				</div>
-			</div>
-			<div class="body">
-				<div>
-					<div>
-						<h1>SUGARBLOOM BAKERY</h1>
-						<h2>All Types of Beautiful Cakes</h2>
-						<p>I have always liked cakes. They are good to taste and every one of them is a little bit of happiness. At SugarBloom, we bake all varieties: chocolate, vanilla, red velvet, fruit cakes, cheesecakes, carrot cakes, and custom creations.</p>
-					</div>
-					<img src="images/image 3.jpeg" alt="Vanilla Bloom Cake" style="max-height: 400px; width: 100%; object-fit: cover;">
-				</div>
-			</div>
-			<div class="footer">
-				<div>
-					<ul>
-						<li>
-							<a href="product.html" class="product"></a>
-							<h1>ALL CAKES</h1>
-							<p>Chocolate, Vanilla, Fruit & more</p>
-						</li>
-						<li>
-							<a href="about.html" class="about"></a>
-							<h1>OUR STORY</h1>
-							<p>Passion for baking</p>
-						</li>
-						<li>
-							<a href="product.html" class="flavor"></a>
-							<h1>FLAVORS</h1>
-							<p>20+ flavors available</p>
-						</li>
-						<li>
-							<a href="contact.html" class="contact"></a>
-							<h1>VISIT US</h1>
-							<p>Fresh daily</p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div id="footer">
-			<div>
-				<div class="connect">
-					<a href="https://facebook.com" class="facebook">Facebook</a>
-					<a href="https://instagram.com" class="twitter">Instagram</a>
-					<a href="https://twitter.com" class="googleplus">Twitter</a>
-					<a href="https://pinterest.com" class="pinterest">Pinterest</a>
-				</div>
-				<!-- ✅ REQUIREMENT b: ID AND NAME IN FOOTER -->
-				<p style="font-size: 18px; color: #000000; font-weight: bold; background-color: #f8f9fa; padding: 10px; border-radius: 5px; margin: 10px 0;">
-					&copy; 2025 SugarBloom Bakery. | Student ID: 25224567 | Name: TANBIN ROWNAK JAHAN
-				</p>
-				<p>
-					<a href="https://freewebsitetemplates.com/preview/frozenyogurtshop/index.html" target="_blank" style="color: #1565c0; font-weight: bold;">
-						Original Template: Frozen Yogurt Shop
-					</a>
-				</p>
-			</div>
-		</div>
-	</div>
+<div>
+<a href="product.html">Browse All Cakes</a>
+</div>
+</div>
+<div class="body">
+<div>
+<div>
+<h1>SUGARBLOOM BAKERY</h1>
+<h2>All Types of Beautiful Cakes</h2>
+<p>I have always liked cakes. They are good to taste and every one of them is a little bit of happiness. At SugarBloom, we bake all varieties: chocolate, vanilla, red velvet, fruit cakes, cheesecakes, carrot cakes, and custom creations.</p>
+</div>
+<img src="images/image 3.jpeg" alt="Vanilla Bloom Cake" style="max-height: 400px; width: 100%; object-fit: cover;">
+</div>
+</div>
+<div class="footer">
+<div>
+<ul>
+<li>
+<a href="product.html" class="product"></a>
+<h1>ALL CAKES</h1>
+<p>Chocolate, Vanilla, Fruit & more</p>
+</li>
+<li>
+<a href="about.html" class="about"></a>
+<h1>OUR STORY</h1>
+<p>Passion for baking</p>
+</li>
+<li>
+<a href="product.html" class="flavor"></a>
+<h1>FLAVORS</h1>
+<p>20+ flavors available</p>
+</li>
+<li>
+<a href="contact.html" class="contact"></a>
+<h1>VISIT US</h1>
+<p>Fresh daily</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footer">
+<div>
+<div class="connect">
+<a href="https://facebook.com" class="facebook">Facebook</a>
+<a href="https://instagram.com" class="twitter">Instagram</a>
+<a href="https://twitter.com" class="googleplus">Twitter</a>
+<a href="https://pinterest.com" class="pinterest">Pinterest</a>
+</div>
+<!-- ✅ REQUIREMENT b: ID AND NAME IN FOOTER -->
+<p style="font-size: 18px; color: #000000; font-weight: bold; background-color: #f8f9fa; padding: 10px; border-radius: 5px; margin: 10px 0;">
+&copy; 2025 SugarBloom Bakery. | Student ID: 25224567 | Name: TANBIN ROWNAK JAHAN
+</p>
+<p>
+<a href="https://freewebsitetemplates.com/preview/frozenyogurtshop/index.html" target="_blank" style="color: #1565c0; font-weight: bold;">
+Original Template: Frozen Yogurt Shop
+</a>
+</p>
+</div>
+</div>
+</div>
 </body>
 </html>
