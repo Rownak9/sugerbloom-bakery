@@ -1128,4 +1128,34 @@ button {
 }
 button:hover {
     transform: scale(1.05);
-    background: linear-gradient(45deg, #ff
+    background: linear-gradient(45deg, #ff3333, #ff6666);
+}
+
+/* 7. Modified footer appearance */
+#footer {
+    background-color: #fce4ec;
+    border-top: 5px double #f8bbd0;
+    padding: 25px 0;
+    margin-top: 30px;
+}
+
+/* 8. Added hover effect for navigation */
+#navigation li a:hover {
+    background-color: #ffebee;
+    border-radius: 5px;
+}
+
+/* 9. Changed form input styling */
+input, textarea {
+    border: 2px solid #ffb6c1 !important;
+    border-radius: 5px !important;
+}
+
+/* 10. Added special style for cake gallery */
+#body div ul li {
+    background-color: #fff9fb;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* ========== END OF MY CSS MODIFICATIONS ========== */

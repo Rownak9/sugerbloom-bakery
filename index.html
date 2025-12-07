@@ -8,6 +8,54 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<script src="js/mobile.js" type="text/javascript"></script>
+	<style>
+		/* My CSS modifications - clearly visible */
+		.welcome-message-box {
+			background: linear-gradient(135deg, #ffb6c1, #ffcccb);
+			padding: 15px;
+			text-align: center;
+			font-size: 22px;
+			color: #8b0000;
+			font-weight: bold;
+			border: 3px dashed #ff6b6b;
+			margin: 10px 0;
+			border-radius: 10px;
+		}
+		.js-quiz-box {
+			text-align: center;
+			padding: 20px;
+			background: #fff0f0;
+			border-radius: 10px;
+			margin: 20px;
+			border: 3px solid #ffb6c1;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+		}
+		.js-button {
+			padding: 12px 25px;
+			background: linear-gradient(45deg, #ff4081, #ff80ab);
+			color: white;
+			border: none;
+			border-radius: 25px;
+			font-size: 16px;
+			font-weight: bold;
+			cursor: pointer;
+			margin: 10px;
+			transition: all 0.3s;
+		}
+		.js-button:hover {
+			transform: scale(1.1);
+			box-shadow: 0 6px 12px rgba(255,64,129,0.4);
+		}
+		#quizResult {
+			margin-top: 15px;
+			padding: 10px;
+			background-color: #fff8e1;
+			color: #ff8f00;
+			font-weight: bold;
+			border-radius: 5px;
+			min-height: 50px;
+		}
+	</style>
 </head>
 <body>
 	<div id="page">
@@ -41,55 +89,68 @@
 			</div>
 		</div>
 		
-		<!-- ✅ REQUIREMENT 1: JS WELCOME MESSAGE (ONLY ON INDEX) -->
-		<div id="welcome-message" style="background: #ffe6e6; padding: 15px; text-align: center; font-size: 20px; color: #b30000; border: 2px solid #ff6666; margin: 10px 0;">
+		<!-- ✅ REQUIREMENT a: JS WELCOME MESSAGE (ADDED WITH JAVASCRIPT) -->
+		<div class="welcome-message-box">
 			<script>
-				// JS Welcome Message - Added using JavaScript
-				document.write("🎀 Welcome to SugarBloom Bakery - Where Every Cake Blooms with Flavor! 🎂");
+				// This welcome message is added using JavaScript
+				document.write("🎂 Welcome to SugarBloom Bakery - Where Every Cake is a Blooming Delight! 🍰");
 			</script>
 		</div>
 		
-		<!-- ✅ REQUIREMENT 5: VISIBLE TEMPLATE LINK -->
-		<a href="https://freewebsitetemplates.com/preview/frozenyogurtshop/index.html" target="_blank" 
-		   style="display: block; background: #e3f2fd; color: #1565c0; padding: 15px; text-align: center; 
-		          border: 3px solid #2196f3; font-weight: bold; margin: 10px 0; text-decoration: none;">
-			🔗 ORIGINAL TEMPLATE LINK (Click to compare with my modified version)
-		</a>
+		<!-- ✅ REQUIREMENT e: VERY VISIBLE TEMPLATE LINK -->
+		<div style="background: #e3f2fd; color: #1565c0; padding: 15px; text-align: center; 
+		           border: 3px solid #2196f3; font-weight: bold; margin: 10px 0; border-radius: 5px;">
+			<a href="https://freewebsitetemplates.com/preview/frozenyogurtshop/index.html" target="_blank" 
+			   style="color: #1565c0; text-decoration: none;">
+				🔗 ORIGINAL TEMPLATE LINK (Frozen Yogurt Shop Template) - Click to compare!
+			</a>
+		</div>
 		
-		<!-- ✅ REQUIREMENT 2: JS FUNCTION WITH USER INPUT -->
-		<div style="text-align: center; padding: 20px; background: #fff0f0; border-radius: 10px; margin: 20px; border: 2px solid #ffb6c1;">
+		<!-- ✅ REQUIREMENT c: JS FUNCTION WITH USER INPUT - VERY VISIBLE -->
+		<div class="js-quiz-box">
 			<h2 style="color: #d81b60;">🎂 Interactive Cake Quiz 🍰</h2>
-			<p>Tell us about your cake preferences!</p>
-			<button onclick="cakeQuiz()" 
-			        style="padding: 12px 25px; background: #ff4081; color: white; border: none; 
-			               border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer;">
-				✨ Click Here for Cake Quiz ✨
+			<p>Test your cake knowledge! Click the button below:</p>
+			<button class="js-button" onclick="startCakeQuiz()">
+				✨ START CAKE QUIZ ✨
 			</button>
-			<div id="cakeResult" style="min-height: 50px; margin-top: 15px; font-weight: bold;"></div>
+			<div id="quizResult"></div>
 		</div>
 		
 		<script>
-			// ✅ REQUIREMENT 2: JS FUNCTION WITH USER INPUT
-			// Interactive cake preference quiz
-			function cakeQuiz() {
-				let name = prompt("Hello! What's your name?");
-				if (!name) {
-					document.getElementById("cakeResult").innerHTML = "Please enter your name to continue!";
-					return;
+			// ✅ REQUIREMENT c: JS FUNCTION WITH USER INPUT
+			// Interactive cake quiz function
+			function startCakeQuiz() {
+				let score = 0;
+				
+				// Question 1
+				let answer1 = prompt("QUESTION 1: What's the main ingredient in most cakes?\nA) Flour\nB) Sugar\nC) Eggs\nD) Butter");
+				if (answer1 && (answer1.toLowerCase() === 'a' || answer1.toLowerCase().includes('flour'))) {
+					score++;
 				}
 				
-				let cakeType = prompt("Hi " + name + "! What's your favorite cake type? (Chocolate, Vanilla, Red Velvet, Fruit, Cheesecake, Carrot)");
-				let occasion = prompt("What occasion are you celebrating? (Birthday, Wedding, Anniversary, Just Because)");
+				// Question 2
+				let answer2 = prompt("QUESTION 2: Which cake is known for its red color?\nA) Chocolate\nB) Red Velvet\nC) Carrot\nD) Cheesecake");
+				if (answer2 && (answer2.toLowerCase() === 'b' || answer2.toLowerCase().includes('red velvet'))) {
+					score++;
+				}
 				
-				if (cakeType && occasion) {
-					document.getElementById("cakeResult").innerHTML = 
-						"🎉 Perfect " + name + "! Our " + cakeType + " cake is perfect for " + occasion + " celebrations!";
-				} else if (cakeType) {
-					document.getElementById("cakeResult").innerHTML = 
-						"🎉 Great choice " + name + "! We make amazing " + cakeType + " cakes!";
+				// Question 3
+				let answer3 = prompt("QUESTION 3: What's your favorite cake flavor? (Type it out)");
+				
+				// Display results
+				let result = document.getElementById("quizResult");
+				if (score === 2) {
+					result.innerHTML = "🎉 Perfect score! You got " + score + "/2 correct! ";
+				} else if (score === 1) {
+					result.innerHTML = "👍 Good job! You got " + score + "/2 correct. ";
 				} else {
-					document.getElementById("cakeResult").innerHTML = 
-						"🎉 Thanks " + name + "! Visit us to see all our cake varieties!";
+					result.innerHTML = "😊 Thanks for playing! You got " + score + "/2 correct. ";
+				}
+				
+				if (answer3) {
+					result.innerHTML += "Your favorite flavor: <strong>" + answer3 + "</strong>. We have amazing " + answer3 + " cakes!";
+				} else {
+					result.innerHTML += "Visit us to try all our flavors!";
 				}
 			}
 		</script>
@@ -104,7 +165,7 @@
 			<div class="body">
 				<div>
 					<div>
-						<h1>WELCOME TO SUGARBLOOM BAKERY</h1>
+						<h1>SUGARBLOOM BAKERY</h1>
 						<h2>All Types of Beautiful Cakes</h2>
 						<p>I have always liked cakes. They are good to taste and every one of them is a little bit of happiness. At SugarBloom, we bake all varieties: chocolate, vanilla, red velvet, fruit cakes, cheesecakes, carrot cakes, and custom creations.</p>
 					</div>
@@ -146,7 +207,7 @@
 					<a href="https://twitter.com" class="googleplus">Twitter</a>
 					<a href="https://pinterest.com" class="pinterest">Pinterest</a>
 				</div>
-				<!-- ✅ REQUIREMENT: ID AND NAME IN FOOTER (BLACK & VISIBLE) -->
+				<!-- ✅ REQUIREMENT b: ID AND NAME IN FOOTER -->
 				<p style="font-size: 18px; color: #000000; font-weight: bold; background-color: #f8f9fa; padding: 10px; border-radius: 5px; margin: 10px 0;">
 					&copy; 2025 SugarBloom Bakery. | Student ID: 25224567 | Name: TANBIN ROWNAK JAHAN
 				</p>
