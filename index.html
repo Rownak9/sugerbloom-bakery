@@ -85,11 +85,52 @@
 			</div>
 		</div>
 		
-		<div class="welcome-message-box">
-			<script>
-				document.write("🎂 Welcome to SugarBloom Bakery - Taste the Happiness! 🍰");
-			</script>
-		</div>
+	<!-- JavaScript Welcome Message -->
+<div id="jsWelcomeMessage"></div>
+
+<script>
+    // JavaScript Welcome Message - Added by TANBIN ROWNAK JAHAN
+    function showWelcomeMessage() {
+        const container = document.getElementById('jsWelcomeMessage');
+        if (!container) return;
+        
+        const welcomeDiv = document.createElement('div');
+        welcomeDiv.className = 'welcome-message-box';
+        welcomeDiv.innerHTML = `
+            <div style="
+                background: #ffe6e6;
+                padding: 15px;
+                text-align: center;
+                border-radius: 8px;
+                border: 2px dashed #ff6666;
+                margin: 5px;
+                font-size: 18px;
+                color: #b30000;
+            ">
+                <strong>🎂 Welcome to SugarBloom Bakery - Taste the Happiness! 🍰</strong>
+                <br>
+                <small style="color: #888; font-size: 12px;">
+                    (This welcome message was dynamically generated with JavaScript)
+                </small>
+            </div>
+        `;
+        
+        container.appendChild(welcomeDiv);
+        
+        // Add click interaction to demonstrate JavaScript capability
+        welcomeDiv.onclick = function() {
+            this.style.transform = 'scale(0.98)';
+            this.style.transition = 'transform 0.2s';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+                alert('Thanks for visiting SugarBloom Bakery! 🍰\nEnjoy our fresh cakes!');
+            }, 200);
+        };
+    }
+    
+    // Run when page loads
+    document.addEventListener('DOMContentLoaded', showWelcomeMessage);
+</script>
 		
 		<div style="background: #e3f2fd; padding: 10px; text-align: center; border: 2px solid #2196f3; margin: 10px 0;">
 			<a href="https://freewebsitetemplates.com/preview/frozenyogurtshop/index.html" target="_blank" style="color: #1565c0;">
