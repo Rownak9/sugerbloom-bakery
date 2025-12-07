@@ -1157,5 +1157,69 @@ input, textarea {
     border-radius: 10px;
     padding: 10px;
 }
+/* ========== FIXES FOR INDEX PAGE ========== */
 
+/* Fix main homepage image size */
+#body.home div.header img {
+    max-height: 300px !important;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Fix the navigation buttons at bottom */
+#body.home div.footer div ul li a {
+    display: block;
+    background: url(../images/icons.png) no-repeat;
+    height: 44px;
+    margin: 0 auto 22px;
+    width: 80px;
+}
+
+/* Make sure buttons are clickable */
+#body.home div.footer div ul li a.product {
+    background-position: 0 -372px;
+}
+#body.home div.footer div ul li a.about {
+    background-position: 0 -418px;
+}
+#body.home div.footer div ul li a.flavor {
+    background-position: 0 -280px;
+}
+#body.home div.footer div ul li a.contact {
+    background-position: 0 -326px;
+}
+
+/* Fix layout of bottom navigation boxes */
+#body.home div.footer div ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+    width: 100%;
+}
+
+#body.home div.footer div ul li {
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+/* Make sure images are visible */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix body text visibility */
+#body.home div.body div div h1,
+#body.home div.body div div h2,
+#body.home div.body div div p {
+    position: relative;
+    z-index: 10;
+}
 /* ========== END OF MY CSS MODIFICATIONS ========== */
